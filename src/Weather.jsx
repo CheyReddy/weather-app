@@ -20,6 +20,9 @@ function Weather() {
       inputRef.current.focus();
       return;
     }
+
+    inputRef.current.blur();
+
     try {
       const data = await getWeatherData(cityName);
       if (data.cod === "404") {
@@ -77,6 +80,7 @@ function Weather() {
               if (e.key === "Enter") {
                 getData();
               }
+              inputRef.current.blur();
             }}
           />
           <button onClick={getData}>
