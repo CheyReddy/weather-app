@@ -30,11 +30,13 @@ function Weather() {
       setDetails(data);
       setError("");
       setCityName("");
-      inputRef.current.focus();
     } catch (error) {
       setError("City not found...!");
       setDetails(null);
       inputRef.current.focus();
+      setCityName("");
+    } finally {
+      setCityName("");
     }
   };
 
@@ -49,7 +51,7 @@ function Weather() {
       case id >= 600 && id < 700:
         return "❄️";
       case id >= 701 && id < 800:
-        return "🌫";
+        return "☁️";
       case id === 800:
         return "🌞";
       case id >= 801 && id < 810:
