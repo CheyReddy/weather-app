@@ -21,7 +21,7 @@ function Weather() {
       return;
     }
 
-    inputRef.current.blur();
+    // inputRef.current.blur();
 
     try {
       const data = await getWeatherData(cityName);
@@ -79,8 +79,8 @@ function Weather() {
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 getData();
+                inputRef.current.blur();
               }
-              inputRef.current.blur();
             }}
           />
           <button onClick={getData}>
