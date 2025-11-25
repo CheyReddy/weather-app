@@ -73,6 +73,11 @@ function Weather() {
             placeholder="Enter City Name..."
             value={cityName}
             onChange={(e) => setCityName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                getData();
+              }
+            }}
           />
           <button onClick={getData}>
             <span className="full-text">Get Weather</span>
