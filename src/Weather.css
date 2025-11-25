@@ -86,12 +86,15 @@
 }
 
 @media (max-width: 639px) {
+
+    .container {
+        padding: 10px 20px;
+    }
+
     h1 {
         font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
     }
-
-    .search-input {}
 
     .search-input+button {
         padding: 10px;
